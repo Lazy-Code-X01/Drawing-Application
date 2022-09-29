@@ -1,0 +1,192 @@
+@import './color';
+@import './font';
+@import './_extendables.scss';
+@import './range-slider';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: primaryFont;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: $secondary-color;
+
+    .nav{
+        width: 100%;
+        height: max-content;
+        // background-color: rgb(28, 33, 33);
+        padding: 1em 0 1em 0;
+        display: flex;
+        justify-content: space-evenly;
+
+        ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            width: 47%;
+            // background-color: green;
+            display: flex;
+            align-items: center;
+
+            .logo{
+                width: 70px;
+                height: 70px;
+                background-image: url(../images/v.0.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                // background: red;
+            }
+
+            li{
+                list-style-type: none;
+                padding: .8em;
+                margin-left: 5em;
+                cursor: pointer;
+                font-size: 1.1rem;
+                // display: ;
+            }
+        }
+    }
+    // sub container
+    .sub-container{
+        width: 100%;
+        height: 87.2vh;
+        // background: red;
+        display: flex;
+        .right-side-bar{
+            width: 10%;
+            height: 100%;
+            background-color: $secondary-color;
+
+            nav{
+                width: 50%;
+                height: 100%;
+                // background: blue;
+                margin: 0 .8em;
+
+                ul{
+                    padding: 1em 0 0 0;
+                    li:nth-child(1){
+                        width: 50%;
+                        height: 70px;
+                        list-style-type:none;
+                        cursor: pointer;
+                        margin: .8em auto;
+                        background-image: url(../images/v.1.png);
+                        @include backgroundstyle;
+                    }
+                    li:nth-child(2){
+                        width: 50%;
+                        height: 70px;
+                        list-style-type:none;
+                        cursor: pointer;
+                        margin: .8em auto;
+                        background-image: url(../images/v.2.png);
+                        @include backgroundstyle;
+                    }
+                    li:nth-child(3){
+                        width: 50%;
+                        height: 70px;
+                        list-style-type:none;
+                        cursor: pointer;
+                        margin: .8em auto;
+                        background-image: url(../images/v.3.png);
+                        @include backgroundstyle;
+                    }
+                    li:nth-child(4){
+                        width: 50%;
+                        height: 70px;
+                        list-style-type:none;
+                        cursor: pointer;
+                        margin: .8em auto;
+                        background-image: url(../images/v.4.png);
+                        @include backgroundstyle;
+                    }
+                    li:nth-child(5){
+                        width: 50%;
+                        height: 70px;
+                        list-style-type:none;
+                        cursor: pointer;
+                        margin: .8em auto;
+                        background-image: url(../images/v.5.png);
+                        @include backgroundstyle;                        
+                    }
+                }
+
+                .color-picker-container{
+                    width: 50%;
+                    height: 220px;
+                    margin: .8em auto;
+                    border: 3px solid $tertiary-color;
+                    // background: green;
+                    background-image: url(../images/v.6.png);
+                    @include backgroundstyle;
+                    background-size: cover;
+                    cursor: pointer;
+
+                    input{
+                        position: absolute;
+                        left: 90px;
+                        height: 220px;
+                        // background-color: red;
+                        background-image: url(../images/v.6.png);
+                        @include backgroundstyle;
+                        background-size: cover;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .3s ease;
+                    }
+
+                    .show{
+                        visibility: visible;
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        // drawing board pannel
+        .drawing-board{
+            width: 80%;
+            height: 87vh;
+            // background: green;
+
+            .canvas-container{
+                width: 100%;
+                height: 90%;
+                background-color: white;
+            }
+            .range-container{
+                width: 100%;
+                height: 10%;
+                // background-color: rgb(10, 11, 11);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px  0 0;
+            }
+        }
+        .left-side-bar{
+            position: relative;
+            width: 10%;
+            background: url(../images/v.7.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            // background: green;
+            .box{
+                position: absolute;
+                top: -90px;
+                left: 100px;
+                height: 220px;
+                width: 37%;
+                background-color: $tertiary-color;
+            }
+        }
+    }
+}
+
